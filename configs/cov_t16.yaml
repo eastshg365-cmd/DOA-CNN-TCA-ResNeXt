@@ -1,0 +1,30 @@
+# Config: Covariance matrix input, T=16 snapshots
+input_type: cov
+T: 16
+M: 5
+N: 6
+num_sensors: 12
+num_classes: 121
+doa_min: -60
+doa_max: 60
+doa_step: 1
+snr_train: 10
+snr_eval_range: [0, 5, 10, 15, 20]
+
+train_h5: data/cov_t16_train.h5
+val_h5: data/cov_t16_val.h5
+test_h5: data/cov_t16_test.h5
+num_samples_train: 1600000
+num_samples_val: 200000
+num_samples_test: 200000
+
+batch_size: 128
+num_epochs: 50
+lr: 0.001
+weight_decay: 0.01
+early_stop_patience: 10
+val_split: 0.1
+num_workers: 8
+
+checkpoint_dir: results/checkpoints
+log_dir: results/logs/cov_t16

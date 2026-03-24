@@ -1,0 +1,33 @@
+# Config: Raw signal input, T=16 snapshots
+input_type: raw        # raw or cov
+T: 16                  # number of snapshots
+M: 5                   # coprime parameter 1
+N: 6                   # coprime parameter 2
+num_sensors: 12        # TCA array size
+num_classes: 121       # DOA classes: -60 to +60 deg, step 1 deg
+doa_min: -60
+doa_max: 60
+doa_step: 1
+snr_train: 10          # training SNR (dB)
+snr_eval_range: [0, 5, 10, 15, 20]
+
+# Dataset
+train_h5: data/raw_t16_train.h5
+val_h5: data/raw_t16_val.h5
+test_h5: data/raw_t16_test.h5
+num_samples_train: 1600000
+num_samples_val: 200000
+num_samples_test: 200000
+
+# Training
+batch_size: 128
+num_epochs: 50
+lr: 0.001
+weight_decay: 0.01
+early_stop_patience: 10
+val_split: 0.1
+num_workers: 8
+
+# Output
+checkpoint_dir: results/checkpoints
+log_dir: results/logs/raw_t16

@@ -1,0 +1,42 @@
+# Git ignore for DOA-CNN-TCA-ResNeXt
+
+# Large data files
+data/
+*.h5
+*.hdf5
+
+# Model checkpoints (upload to Google Drive separately)
+results/checkpoints/*.pth
+smoke_test/checkpoints/*.pth
+smoke_test/data/
+smoke_test/logs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Virtual env
+venv/
+env/
+.conda/
+
+# TensorBoard logs (large)
+results/logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temp HDF5 parts
+_tmp_raw/
+_tmp_cov/
