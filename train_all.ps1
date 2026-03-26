@@ -4,7 +4,7 @@
 # Estimated time: ~12-16 hours total on RTX 4090
 
 $ErrorActionPreference = "Stop"
-$ProjectRoot = "C:\Users\11404\Desktop\MD9120\DOA-CNN-TCA-ResNeXt"
+$ProjectRoot = $PSScriptRoot
 Set-Location $ProjectRoot
 
 Write-Host "============================================================" -ForegroundColor Cyan
