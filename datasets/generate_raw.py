@@ -20,18 +20,14 @@ Usage:
 
 import argparse
 import os
-import sys
 import time
 from multiprocessing import Pool, cpu_count
-
-# Ensure project root is in sys.path regardless of how this script is invoked
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import h5py
 import numpy as np
 from tqdm import tqdm
 
-# Project-local import
+# Project-local import (run from project root)
 from datasets.array_geometry import get_tca_positions, get_steering_matrix
 
 # ── Constants ─────────────────────────────────────────────────────────────────
